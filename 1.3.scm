@@ -1,0 +1,11 @@
+(define (f a b c)
+  (cond ((and (<= a b) (<= a c))
+         (+ (* b b) (* c c)))
+        ((and (<= b a) (<= b c))
+         (+ (* a a) (* c c)))
+        ((and (<= c a) (<= c b))
+         (+ (* a a) (* b b)))))
+
+(f 0 2 3)
+(f 1 0 1)
+(f 2 2 0)
